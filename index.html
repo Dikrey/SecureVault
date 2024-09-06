@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureVault 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to SecureVault 2.0</h1>
+        <div class="running-text">
+            <p>Protect your passwords and messages with modern encryption tools • By: Raihan_official0307</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-section">
+            <h2>Obfuscate Password (Encrypt)</h2>
+            <div class="wave-group">
+                <input required="" id="passwordInput" type="text" class="input">
+
+                <label class="label">
+                    <span class="label-char" style="--index: 0">P</span>
+                    <span class="label-char" style="--index: 1">A</span>
+                    <span class="label-char" style="--index: 2">S</span>
+                    <span class="label-char" style="--index: 3">S</span>
+                    <span class="label-char" style="--index: 3">W</span>
+                    <span class="label-char" style="--index: 3">O</span>
+                    <span class="label-char" style="--index: 3">R</span>
+                    <span class="label-char" style="--index: 3">D</span>
+                </label>
+            </div>
+            <button onclick="obfuscatePassword()">Encrypt Password</button>
+            <p id="encryptedPassword"></p>
+            <div class="Btn" id="copyEncrypted" onclick="copyToClipboard('encryptedPassword')">
+                <span class="text">Copy</span>
+                <span class="svgIcon">
+                    <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Decode Password (Decrypt)</h2>
+            <div class="wave-group">
+                <input required="" id="encodedInput" type="text" class="input">
+
+                <label class="label">
+                    <span class="label-char" style="--index: 0">C</span>
+                    <span class="label-char" style="--index: 1">O</span>
+                    <span class="label-char" style="--index: 2">D</span>
+                    <span class="label-char" style="--index: 3">E</span>
+
+                </label>
+            </div>
+
+            <button onclick="decodePassword()">Decrypt Password</button>
+            <p id="decodedPassword"></p>
+            <div class="Btn" id="copyDecoded" onclick="copyToClipboard('decodedPassword')">
+                <span class="text">Copy</span>
+                <span class="svgIcon">
+                    <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Scramble Message</h2>
+            <div class="wave-group">
+                <input required="" id="messageInput" type="text" class="input">
+
+                <label class="label">
+                    <span class="label-char" style="--index: 0">M</span>
+                    <span class="label-char" style="--index: 1">E</span>
+                    <span class="label-char" style="--index: 2">S</span>
+                    <span class="label-char" style="--index: 3">S</span>
+                    <span class="label-char" style="--index: 3">A</span>
+                    <span class="label-char" style="--index: 3">G</span>
+                    <span class="label-char" style="--index: 3">E</span>
+                </label>
+            </div>
+            <button onclick="scrambleMessage()">Scramble Message</button>
+            <p id="scrambledMessage"></p>
+            <div class="Btn" id="copyScrambled" onclick="copyToClipboard('scrambledMessage')">
+                <span class="text">Copy</span>
+                <span class="svgIcon">
+                    <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Unscramble Message</h2>
+            <div class="wave-group">
+                <input required="" id="unscrambleInput" type="text" class="input">
+
+                <label class="label">
+                    <span class="label-char" style="--index: 0">C</span>
+                    <span class="label-char" style="--index: 1">O</span>
+                    <span class="label-char" style="--index: 2">D</span>
+                    <span class="label-char" style="--index: 3">E</span>
+
+                </label>
+            </div>
+
+            <button onclick="unscrambleMessage()">Unscramble Message</button>
+            <p id="unscrambledMessage"></p>
+            <div class="Btn" id="copyUnscrambled" onclick="copyToClipboard('unscrambledMessage')">
+                <span class="text">Copy</span>
+                <span class="svgIcon">
+                    <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Raihan_official0307. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@Raihan_official-ju9go" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/muhammad_raihan0307/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@raihannstore" target="_blank">TikTok</a>
+            <a href="https://wa.me/6285763416693" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
