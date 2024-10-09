@@ -1,11 +1,11 @@
-# SecureVault v2.0
+# SecureVault v3.0
  SecureVault adalah website tools yang memiliki fitur antara lain sebagai berikut :
 
 1.Obfuscate Password : Mengubah password menjadi kode acak 
 
 2.Decode Password : Mengembalikan password yang sudah diacak menjadi bentuk aslinya. 
 
-3.Scramble Message : Mengacak pesan, disini kalian bisa mengirim pesan yang telah diacak dan memiliki arti yang tersembunyi. 
+3.Scramble Message : Mengacak pesan menjadi URL, disini kalian bisa mengirim pesan yang telah diacak menjadi URL dan memiliki arti yang tersembunyi. 
 
 4.Unscramble Message : Mengembalikan pesan yang sudah diacak kebentuk aslinya.
 
