@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureVault 3.3.0 Raihan</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to SecureVault 3.3.0</h1>
+        <div class="running-text">
+            <p>Protect your passwords and messages with modern encryption tools • By : Raihan_official0307 | Support
+                developer di https://saweria.co/Raihanofficial0307</p>
+        </div>
+    </header>
+
+    <!-- Chatbot Toggler -->
+    <button id="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-rounded">close</span>
+    </button>
+
+    <div class="chatbot-popup">
+        <!-- Chatbot Header -->
+        <div class="chat-header">
+            <div class="header-info">
+                <svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                    viewBox="0 0 1024 1024">
+                    <path
+                        d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z" />
+                </svg>
+                <h2 class="logo-text">Chatbot Raihan_official0307</h2>
+            </div>
+            <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+        </div>
+
+        <!-- Chatbot Body -->
+        <div class="chat-body">
+            <div class="message bot-message">
+                <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                    viewBox="0 0 1024 1024">
+                    <path
+                        d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z" />
+                </svg>
+                <!-- prettier-ignore -->
+                <div class="message-text"> Halo Teman <br /> Ada yang bisa saya bantu? <br>Saya adalah Artificial
+                    Intelligence (AI) buatan Raihan_official0307 yang siap membantu Anda.</div>
+            </div>
+        </div>
+
+        <!-- Chatbot Footer -->
+        <div class="chat-footer">
+            <form action="#" class="chat-form">
+                <textarea placeholder="Message..." class="message-input" required></textarea>
+                <div class="chat-controls">
+                    <button type="button" id="emoji-picker"
+                        class="material-symbols-outlined">sentiment_satisfied</button>
+                    <div class="file-upload-wrapper">
+                        <input type="file" accept="image/*" id="file-input" hidden />
+                        <img src="#" />
+                        <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+                        <button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+                    </div>
+                    <button type="submit" id="send-message" class="material-symbols-rounded">send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Clock Display -->
+    <div class="clock-container">
+        <div class="greeting" id="greetingMessage"></div>
+        <div class="clock" id="clock"></div>
+        <div class="date" id="date"></div>
+    </div>
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <h2>Hai, Welcome to Secure Vault!</h2>
+            <p class="pmodal">Masukkan nama kamu untuk melanjutkan:</p><br>
+            <input type="text" id="userNameInput" placeholder="Masukkan nama">
+            <button onclick="submitName()">Konfirmasi</button>
+        </div>
+    </div>
+    <div class="notification">
+        <div class="notiglow"></div>
+        <div class="notiborderglow"></div>
+        <div class="notititle">Welcome to SecureVault</div>
+        <div class="notibody">Protect your passwords and messages with modern encryption tools • By :
+            Raihan_official0307</div>
+    </div>
+    <div class="card">
+        <h2>SecureVault Version 3.1.0</h2>
+    </div>
+    <button type="button" class="button5" onclick="location.reload();">
+        <span class="button5__text">Refresh</span>
+        <span class="button5__icon"><svg class="svg" height="48" viewBox="0 0 48 48" width="48"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M35.3 12.7c-2.89-2.9-6.88-4.7-11.3-4.7-8.84 0-15.98 7.16-15.98 16s7.14 16 15.98 16c7.45 0 13.69-5.1 15.46-12h-4.16c-1.65 4.66-6.07 8-11.3 8-6.63 0-12-5.37-12-12s5.37-12 12-12c3.31 0 6.28 1.38 8.45 3.55l-6.45 6.45h14v-14l-4.7 4.7z">
+                </path>
+                <path d="M0 0h48v48h-48z" fill="none"></path>
+            </svg></span>
+    </button>
+
+    <div class="container">
+        <div class="form-section">
+            <h2>Obfuscate Password (Encrypt)</h2>
+            <div class="wave-group">
+                <input required="" id="passwordInput" type="text" class="input">
+
+                <label class="label">
+                    <span class="label-char" style="--index: 0">P</span>
+                    <span class="label-char" style="--index: 1">A</span>
+                    <span class="label-char" style="--index: 2">S</span>
+                    <span class="label-char" style="--index: 3">S</span>
+                    <span class="label-char" style="--index: 3">W</span>
+                    <span class="label-char" style="--index: 3">O</span>
+                    <span class="label-char" style="--index: 3">R</span>
+                    <span class="label-char" style="--index: 3">D</span>
+                </label>
+            </div>
+            <button onclick="obfuscatePassword()">Encrypt Password</button>
+            <p id="encryptedPassword"></p>
+            <div class="Btn" id="copyEncrypted" onclick="copyToClipboard('encryptedPassword')">
+                <span class="text">Copy</span>
+
+                <span class="svgIcon">
+                    <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Decode Password (Decrypt)</h2>
+            <div class="wave-group">
+                <input required="" id="encodedInput" type="text" class="input">
+
+                <label class="label">
+                    <span class="label-char" style="--index: 0">C</span>
+                    <span class="label-char" style="--index: 1">O</span>
+                    <span class="label-char" style="--index: 2">D</span>
+                    <span class="label-char" style="--index: 3">E</span>
+
+                </label>
+            </div>
+
+            <button onclick="decodePassword()">Decrypt Password</button>
+            <p id="decodedPassword"></p>
+            <div class="Btn" id="copyDecoded" onclick="copyToClipboard('decodedPassword')">
+                <span class="text">Copy</span>
+                <span class="svgIcon">
+                    <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Scramble Message</h2>
+            <div class="wave-group">
+                <input required="" id="messageInput" type="text" class="input">
+
+                <label class="label">
+                    <span class="label-char" style="--index: 0">M</span>
+                    <span class="label-char" style="--index: 1">E</span>
+                    <span class="label-char" style="--index: 2">S</span>
+                    <span class="label-char" style="--index: 3">S</span>
+                    <span class="label-char" style="--index: 4">A</span>
+                    <span class="label-char" style="--index: 5">G</span>
+                    <span class="label-char" style="--index: 6">E</span>
+                </label>
+            </div>
+            <button onclick="scrambleMessage()">Scramble Message</button>
+            <p id="scrambledMessage"></p>
+            <p id="shareUrl" style="display:none;"></p>
+            <div class="Btn" id="copyScrambled" onclick="copyToClipboard('shareUrl')">
+                <span class="text">Copy</span>
+                <span class="svgIcon">
+                    <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+
+
+
+        <div class="form-section">
+            <h2>Unscramble Message</h2>
+            <div class="wave-group">
+                <input required="" id="unscrambleInput" type="text" class="input" placeholder="">
+
+                <label class="label">
+                    <span class="label-char" style="--index: 0">L</span>
+                    <span class="label-char" style="--index: 1">I</span>
+                    <span class="label-char" style="--index: 2">N</span>
+                    <span class="label-char" style="--index: 3">K</span>
+                </label>
+            </div>
+            <button onclick="unscrambleMessage()">Unscramble Message</button>
+            <p id="unscrambledMessage"></p>
+            <div class="Btn" id="copyUnscrambled" style="display:none;" onclick="copyToClipboard('unscrambledMessage')">
+                <span class="text">Copy</span>
+                <span class="svgIcon">
+                    <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="container1">
+            <h1>Fitur Detail</h1>
+            <details>
+                <summary>Update 3.3.0</summary>
+                <p>Website ini telah diperbarui ke versi 3.3.0 dengan fitur baru yang super keren—sebuah chatbot
+                    berbasis Artificial Intelligence (AI) yang siap membantu kamu kapan saja! Chatbot ini tidak hanya
+                    mampu memberikan jawaban atas pertanyaanmu, tetapi juga bisa belajar dari setiap interaksi,
+                    menjadikan pengalamanmu semakin cerdas dan personal.</p>
+                <p>Dengan teknologi AI terbaru, chatbot ini bisa menjawab pertanyaan-pertanyaan seputar fitur website,
+                    memberikan informasi terkini, bahkan membantu menyelesaikan tugas-tugas sederhana. Tidak perlu ragu
+                    untuk bertanya atau mencari bantuan, cukup klik ikon chatbot di sudut kanan bawah, dan mulai
+                    percakapan kapan saja. Fitur ini dirancang untuk mudah digunakan, cepat merespons, dan pastinya
+                    ramah!</p>
+                <p>Ingin tahu lebih lanjut tentang kemampuan baru chatbot ini dan bagaimana cara memaksimalkannya? Yuk,
+                    klik tombol di bawah ini untuk informasi lebih lengkap!</p>
+            </details>
+            <details>
+                <summary>Update 3.1.0</summary>
+                <p>Website ini baru saja diperbarui dengan sejumlah fitur menarik. Salah satunya adalah kemampuan untuk
+                    mengubah pesan menjadi tautan (URL), sehingga bisa dengan mudah dibagikan ke orang lain tetapi
+                    mereka tidak tahu artinya, serta fitur untuk mengacak pesan agar lebih aman. Selain itu, kini
+                    website ini dilengkapi dengan proteksi tambahan—kamu tidak bisa lagi menggunakan CTRL+U untuk
+                    melihat kode sumber, dan klik kanan juga dinonaktifkan. Coba saja jika tidak percaya! Bagi pengguna
+                    smartphone, menekan lama pada layar akan menampilkan pesan yang memberi tahu bahwa klik kanan tidak
+                    diizinkan di sini.</p>
+                <p>Perubahan terbaru lainnya adalah fitur ucapan selamat datang yang dipersonalisasi! Ketika kamu
+                    pertama kali membuka website ini, akan muncul pesan sambutan yang meminta namamu, sehingga kami bisa
+                    menyapamu dengan ucapan seperti "Selamat Pagi", "Selamat Siang", "Selamat Sore", atau "Selamat
+                    Malam" berdasarkan waktu Jakarta saat ini. Selain itu, kini terdapat tampilan jam, hari, tanggal,
+                    bulan, dan tahun yang terupdate secara real-time untuk memberikan pengalaman lebih interaktif.</p>
+                <p>Untuk informasi lebih lengkap tentang semua fitur baru dan cara kerjanya, kamu bisa klik tombol di
+                    bawah ini.</p>
+            </details>
+
+            <details>
+                <summary>Obfuscate Password (Enkripsi)</summary>
+                <p>Mengubah kata sandi menjadi kode acak yang tidak bisa dibaca oleh manusia. Dengan fitur ini, Anda
+                    dapat
+                    mengonversi kata sandi menjadi format yang lebih aman untuk dienkripsi dan didekripsi dengan mudah.
+                    Tidak hanya untuk kata sandi, Anda juga dapat menggunakan fitur ini untuk mengacak pesan penting
+                    agar
+                    lebih aman.</p>
+            </details>
+
+            <details>
+                <summary>Decode Password (Dekripsi)</summary>
+                <p>Mengembalikan kata sandi yang telah diacak ke bentuk aslinya. Fitur ini memungkinkan Anda mengubah
+                    kode
+                    yang awalnya tidak dapat dibaca menjadi bentuk aslinya. <br><strong>Catatan:</strong> Untuk
+                    mendekripsi
+                    kata sandi atau pesan, Anda harus memiliki kode asli yang lengkap, dan kode tersebut harus
+                    dihasilkan
+                    melalui sistem kami agar dapat dikembalikan ke bentuk aslinya.</p>
+            </details>
+
+            <details>
+                <summary>Scramble Message (Mengacak Pesan)</summary>
+                <p>Fitur ini memungkinkan Anda mengirim pesan yang telah diacak menjadi URL sehingga memiliki arti
+                    tersembunyi.
+                    Fitur ini mengubah pesan menjadi URL yang terenkripsi. Jika Anda ingin keamanan lebih
+                    tinggi, gunakan fitur "Obfuscate Password" yang mengacak dengan angka dan huruf. jika anda
+                    menggunakan
+                    "Obfuscate Password" Untuk mengembalikan pesan ke bentuk aslinya, gunakan fitur "Decode Password".
+                </p>
+            </details>
+
+            <details>
+                <summary>Unscramble Message (Mengembalikan Pesan)</summary>
+                <p>Mengembalikan pesan yang telah diacak menjadi URL ke bentuk aslinya. Fitur ini berfungsi seperti
+                    "Decode Password".
+                    <br><strong>Catatan:</strong> Agar pesan dapat dikembalikan ke bentuk aslinya, URL yang digunakan
+                    harus lengkap dan sesuai dengan URL yang dihasilkan dari sistem kami.
+                </p>
+            </details>
+
+            <details>
+                <summary>Dukungan Pengembang</summary>
+                <p>Jika ada pertanyaan atau saran, jangan ragu untuk menghubungi: <a
+                        href="https://wa.me/6285763416693">Whatsapp</a><br>
+                    Ikuti akun media sosial pengembang:
+                    <br><a href="https://www.instagram.com/muhammad_raihan0307/">Instagram</a> |
+                    <a href="https://www.tiktok.com/@raihannstore">Tiktok</a> |
+                    <a href="https://www.youtube.com/@Raihan_official-ju9go">Youtube</a><br>
+                    <br><strong>ᎠᎨᏦᏒᎬᎽ ᏕᎿᎾᏒᎬ 🛒</strong>
+                    <br>- Jasa pembuatan all website (termasuk website undangan) dll
+                    <br>- Penjualan bot WhatsApp
+                    <br>- Penyedia server bot WhatsApp, dll
+                    <br>Info lebih lanjut hubungi: <a href="https://wa.me/6285763416693">Whatsapp</a>
+                    <br>Support developer di: <a href="https://saweria.co/Raihanofficial0307">Saweria</a>
+                </p>
+            </details>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2024 Raihan_official0307. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@Raihan_official-ju9go" target="_blank">YouTube</a>
+                <a href="https://www.instagram.com/muhammad_raihan0307/" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@raihannstore" target="_blank">TikTok</a>
+                <a href="https://saweria.co/Raihanofficial0307" target="_blank">Donasi</a>
+            </div>
+        </footer>
+
+
+        <!-- Linking Emoji Mart script for emoji picker -->
+        <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+
+        <!-- Linking custom script -->
+        <script src="script.js"></script>
+</body>
+
+</html>
