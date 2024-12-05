@@ -1,226 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battery Indicator with Animations</title>
-    <style>
-        /* FONTS */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Maintenance SecureVault</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+  <style>
+    /* Reset dan gaya dasar */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans', sans-serif;
+      background: linear-gradient(to bottom, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
 
-        /* ANIMATION */
-        @keyframes Charging {
-            0%, 100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.5;
-                transform: scale(1.1);
-            }
-        }
-        
-        @keyframes NotCharging {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.6;
-            }
-        }
-        
-        @keyframes TextAnimation {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            50% {
-                transform: translateY(-10px);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        html {
-            overflow: hidden;
-            font-family: 'Montserrat', sans-serif;
-        }
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
 
-        .card2 {
-            width: 390px;
-            padding: 20px;
-            background-color: #f3f3f3b5;
-            backdrop-filter: blur(7px);
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .infoBox2 {
-            background-color: #e0e0e0;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            padding: 10px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            width: auto;
-            animation: TextAnimation 2s ease-in-out infinite;
-        }
-        .deviceType, .deviceModel, .operatingSystem {
-            font-size: 16px;
-            font-weight: 500;
-            color: #444;
-        }
-        .batteryShape {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .batteryBorder {
-            border: 3px solid black;
-            width: 180px;
-            height: 80px;
-            border-radius: 10px;
-            position: relative;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-        .percentage {
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            right: 4px;
-            bottom: 4px;
-            border-radius: 5px;
-            transition: background-color 0.5s;
-        }
-        .percent {
-            font-size: 20px;
-            font-weight: 600;
-            margin: 10px 0;
-        }
-        .isCharging {
-            font-size: 18px;
-            font-weight: 700;
-            color: #333;
-            animation: Charging 2s ease-in-out infinite;
-        }
-        .notCharging {
-            font-size: 18px;
-            font-weight: 700;
-            color: #333;
-            animation: NotCharging 2s ease-in-out infinite;
-        }
-    </style>
+    .box h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    .box a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animasi lingkaran */
+    .animation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 15px;
+    }
+
+    .animation div {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #ffd700;
+    }
+
+    .spin-one {
+      animation: spin 1.5s linear infinite;
+    }
+
+    .spin-two {
+      animation: spin 1.5s linear infinite reverse;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(0.5);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="card2">
-        <div class="infoBox2" id="deviceType"></div>
-        <div class="infoBox2" id="deviceModel"></div>
-        <div class="infoBox2" id="operatingSystem"></div>
-        <div class="batteryShape">
-            <div class="batteryBorder">
-                <div class="percentage"></div>
-            </div>
-            <div class="percent"></div>
-            <p id="chargingStatus" class="isCharging"></p>
-        </div>
+  <div class="container">
+    <div class="box">
+      <!-- Animasi lingkaran -->
+      <div class="animation">
+        <div class="one spin-one"></div>
+        <div class="two spin-two"></div>
+        <div class="three spin-one"></div>
+      </div>
+      <!-- Judul dan deskripsi -->
+      <h1>🚧 Under Maintenance 🚧</h1>
+      <p>Saat ini, website <strong>SecureVault</strong> sedang dalam proses pembaruan.</p>
+      <p>Stay tuned untuk fitur-fitur baru yang akan segera hadir!</p>
+      <p>Follow Instagram developer: 
+        <a href="https://www.instagram.com/muhammad_raihan0307/" target="_blank">
+          Instagram
+        </a>
+      </p>
     </div>
-
-    <script>
-        navigator.getBattery().then(battery => {
-            var percentage = document.querySelector(".percentage");
-            var percent = document.querySelector(".percent");
-            var chargingStatus = document.getElementById("chargingStatus");
-            var deviceType = document.getElementById("deviceType");
-            var deviceModel = document.getElementById("deviceModel");
-            var operatingSystem = document.getElementById("operatingSystem");
-
-            function updateAllBatteryInfo() {
-                updateLevelInfo();
-                updateChargeInfo();
-                updateDeviceInfo();
-            }
-
-            function updateLevelInfo() {
-                var level = battery.level * 100;
-                percentage.style.width = level + '%';
-                percent.innerHTML = Math.floor(level) + '%';
-
-                // Update the color based on battery level
-                if (level <= 0) {
-                    percentage.style.background = 'red';
-                } else if (level <= 25) {
-                    percentage.style.background = 'orange';
-                } else if (level <= 50) {
-                    percentage.style.background = 'yellow';
-                } else if (level <= 75) {
-                    percentage.style.background = '#d7fc03';
-                } else {
-                    percentage.style.background = 'green';
-                }
-            }
-
-            function updateChargeInfo() {
-                if (battery.charging) {
-                    chargingStatus.innerHTML = "Your device is charging.";
-                    chargingStatus.className = "isCharging";
-                } else {
-                    chargingStatus.innerHTML = "Your device is not charging.";
-                    chargingStatus.className = "notCharging";
-                }
-            }
-
-            function updateDeviceInfo() {
-                var ua = navigator.userAgent;
-                if (/mobile/i.test(ua)) {
-                    deviceType.innerHTML = "Device Type: Mobile";
-                } else if (/tablet/i.test(ua)) {
-                    deviceType.innerHTML = "Device Type: Tablet";
-                } else {
-                    deviceType.innerHTML = "Device Type: Desktop";
-                }
-
-                // Extract device model information from user agent
-                var model = ua.match(/\((.*?)\)/);
-                if (model) {
-                    deviceModel.innerHTML = "Device Model: " + model[1];
-                } else {
-                    deviceModel.innerHTML = "Device Model: Unknown";
-                }
-
-                if (/Windows/i.test(ua)) {
-                    operatingSystem.innerHTML = "Operating System: Windows";
-                } else if (/Mac/i.test(ua)) {
-                    operatingSystem.innerHTML = "Operating System: macOS";
-                } else if (/Android/i.test(ua)) {
-                    operatingSystem.innerHTML = "Operating System: Android";
-                } else if (/iPhone|iPad/i.test(ua)) {
-                    operatingSystem.innerHTML = "Operating System: iOS";
-                } else if (/Linux/i.test(ua)) {
-                    operatingSystem.innerHTML = "Operating System: Linux";
-                } else {
-                    operatingSystem.innerHTML = "Operating System: Unknown";
-                }
-            }
-
-            updateAllBatteryInfo();
-
-            battery.addEventListener('levelchange', () => {
-                updateLevelInfo();
-            });
-
-            battery.addEventListener('chargingchange', () => {
-                updateChargeInfo();
-            });
-        });
-    </script>
+  </div>
 </body>
 </html>
